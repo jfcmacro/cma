@@ -1,36 +1,7 @@
 #!/usr/bin/python3
 import click
 from cont_mem_algos import first_fit, best_fit, worst_fit
-
-def print_memory_map(memory_map):
-    for memory in memory_map:
-        print(f"({memory[0]:#0{8}x}, {memory[1]:#0{8}x})")
-
-def read_reqs_file(reqs_filename):
-    result = []
-    try:
-        with open(reqs_filename, 'r') as reqsfile:
-            for line in reqsfile:
-                req = int(line.strip(),16)
-                result.append(req)
-    except FileNotFoundError:
-        print(f'File not found {reqs_filename}', file=sys.stderr)
-        return None
-    else:
-        return result
-
-def read_memmap_file(memmap_filename):
-    result = []
-    try:
-        with open(memmap_filename, 'r') as mmfile:
-            for line in mmfile:
-                elems = line.strip().split()
-                result.append((int(elems[0],16), int(elems[1],16)))
-    except FileNotFoundError:
-        print(f'File not found {memmap_filename}', file=sys.stderr)
-        return None
-    else:
-        return result
+from utils.utils import print_memory_map,read_reqs_file,read_memmap_file
 
 def cmas(algo_str):
     if algo_str == 'all':
@@ -54,10 +25,6 @@ def cmas(algo_str):
         ]
     elif algo_str == 'worst':
         return [
-            {"name" : "First fit",
-             "function" : first_fit },
-            {"name" : "Best fit",
-             "function" : best_fit },
             {"name" : "Worst fit",
              "function" : worst_fit},
         ]
@@ -93,10 +60,10 @@ def process(memmap, reqs, function, pos):
             if search == None:
                 print(f"Not found: {req:#0{8}x}")
             else:
-                print(f"Assigned to the process base: {search[1]:#0{8}x} limit: {search[2]:#{8}x}")
-                print(f"Index: {search[3]}")
-                print_memory_map(search[0])
-                index = search[3]
+                work_memory,base,limit,index = search
+                print(f"Assigned to the requirement:{req:#0{8}x} [base,limit]:[{base:#0{8}x},{limit:#0{8}x}]")
+                print(f"Index: {index}")
+                print_memory_map(work_memory)
 
 if __name__ == '__main__':
     process()

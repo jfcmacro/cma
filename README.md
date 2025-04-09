@@ -30,20 +30,43 @@ Linux
 export PYTHONPATH=$PYTHONPATH:<path-of-your-project>
 ```
 
+Install two libraries
+
+```shell
+python3 -m pip install pytest parameterized
+```
+
+```shell
+python3 -m pip install pytest parameterized
+```
+
 Windows
 
 ```shell
 SET PYTHONPATH=%PYTHONPATH%;<path-of-your-project>
 ```
 
+Install two libraries
+
+```shell
+python3 -m pip install pytest parameterized
+```
+
+```shell
+python3 -m pip install pytest parameterized
+```
+
+
 Running the test, replace with the name of your algorithm implementation: `first`, `best`, `worst`.
 
 ```shell
 python3 -m unittest test/test_basic_<your_algorithm>_fit.py
+python3 -m unittest test/test_other_<your_algorithm>_fit.py
 ```
 
 ```shell
 python -m unittest test/test_basic_<your_algorithm>_fit.py
+python -m unittest test/test_other_<your_algorithm>_fit.py
 ```
 
 ## Execute cma simulator
