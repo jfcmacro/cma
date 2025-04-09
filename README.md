@@ -37,7 +37,7 @@ python3 -m pip install pytest parameterized
 ```
 
 ```shell
-python3 -m pip install pytest parameterized
+python -m pip install pytest parameterized
 ```
 
 Windows
@@ -53,7 +53,7 @@ python3 -m pip install pytest parameterized
 ```
 
 ```shell
-python3 -m pip install pytest parameterized
+python -m pip install pytest parameterized
 ```
 
 
