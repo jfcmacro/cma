@@ -1,3 +1,5 @@
+import sys
+
 def print_memory_map(memory_map):
     for memory in memory_map:
         print(f"({memory[0]:#0{8}x}, {memory[1]:#0{8}x})")
