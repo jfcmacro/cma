@@ -83,54 +83,74 @@ python -p pip install click
 
 To run the program
 
+Windows:
+
 ```shell
 python3 cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt
 ```
 
+Linux:
+
 ```shell
-python cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt
+python cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/req_1.txt
 ```
 
 The previous execution executes all algorithms you can change to execute different algorithm.
 
 ### To execute the first algorithm.
 
+Windows
+
 ```shell
 python3 cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function first
 ```
 
+Linux
+
 ```shell
-python cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function first
+python cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/req_1.txt --function first
 ```
 
 ### To execute the best algorithm.
+
+Windows:
 
 ```shell
 python3 cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function best
 ```
 
+Linux:
+
 ```shell
-python cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function best
+python cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/req_1.txt --function best
 ```
 
 ### To execute the worst algorithm.
+
+Windows:
 
 ```shell
 python3 cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function worst
 ```
 
+Linux:
+
 ```shell
-python cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function worst
+python cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/req_1.txt --function worst
 ```
 
 ### To execute in different possition
+
+Windows:
 
 ```shell
 python3 cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --pos 3
 ```
 
+Linux:
+
 ```shell
-python cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --pos 3
+python cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/req_1.txt --pos 3
 ```
 
 
